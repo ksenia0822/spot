@@ -4,9 +4,7 @@
 	    <div class="form-group">
 	        <label class="col-xs-3 control-label"></label>
 	        <div class="col-xs-5 selectContainer">
-	            <select name="friend" class="form-control" ng-model="newMessage.to">
-	                <option value="friend._id">Choose a Friend</option>
-	                <option ng-repeat="friend in allFriends">{{friend._id}}</option>
+	            <select name="friend" class="form-control" ng-model="newMessage.to" ng-options="friend._id as friend.firstName + ' ' + friend.lastName for friend in allFriends" >
 	            </select>
 	        </div>
 	    </div>

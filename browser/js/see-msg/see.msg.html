@@ -1,9 +1,8 @@
-<h1> Here are all messages left for you here!</h1>
+<h1> Here are all the messages left for you here:</h1>
 <section id="see-msg">
 	<div ng-repeat="msg in allMessages">
-		<p>From: {{msg.from.firstName}} {{msg.from.lastName}}</p>
-		<p>Date: {{msg.date | date}}</p>
-		<h3>At: {{msg.location.coordinates}}</h3>
-    	<p>Message: {{msg.body}}</p>
+		<h5>From: {{msg.from.firstName}} {{msg.from.lastName}}</h5>
+		<h5>Date: {{msg.date | date}}</h5>
+    	<p>{{msg.body}}</p>
 	</div>
 </section>

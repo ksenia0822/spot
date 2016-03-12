@@ -38,8 +38,8 @@ messageSchema.index({
 });
 
 //get all messages from 1 user:
-messageSchema.statics.getAllWhereSender = function(senderId) {
-    return this.find({from: senderId})
+messageSchema.statics.getAllWhereReceiver = function(id) {
+    return this.find({to: id})
     .populate('from to')
 }
 

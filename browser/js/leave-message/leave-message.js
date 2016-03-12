@@ -25,6 +25,7 @@ app.factory("LeaveMessageFactory", function($http) {
 	LeaveMessageFactory.leaveMessage = function(newMsg) {
 		return $http.post('/api/messages', newMsg)
 		.then(function(res) {
+			console.log("res ", res)
 			return res.data;
 		})
 	};
@@ -32,7 +33,7 @@ app.factory("LeaveMessageFactory", function($http) {
 	return LeaveMessageFactory;
 });
 
-app.controller('LeaveMessageController', function($scope, AuthService, allFriends, LeaveMessageFactory) {
+app.controller('LeaveMessageController', function($scope, $state, AuthService, allFriends, LeaveMessageFactory) {
 	$scope.currentUser = {};
 
 	$scope.newMessage = {
@@ -50,8 +51,8 @@ app.controller('LeaveMessageController', function($scope, AuthService, allFriend
 	$scope.allFriends = allFriends;
 
 	$scope.leaveMessage = function(msg) {
-		console.log(msg)
 		LeaveMessageFactory.leaveMessage(msg)
+		$state.go('main')
 	};
 
 	$scope.getLocation = function() {

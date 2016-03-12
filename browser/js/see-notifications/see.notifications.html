@@ -1,3 +1,6 @@
-<section id="notification">
-    <h1>This is the page to see notifications about all messages left for me in all the locations</h1>
+<h1> Here are all the messages left for you everywhere:</h1>
+<section id="see-msg">
+	<div ng-repeat="msg in allMessages">
+		<h5>Date: {{msg.date | date}} From: {{msg.from.firstName}} {{msg.from.lastName}}</h5>
+	</div>
 </section>

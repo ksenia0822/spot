@@ -20,7 +20,6 @@ app.factory('MessagesHereFactory', function($http) {
 		console.log(lon + " " + lat);
 		return $http.get('/api/messages/to/' + id + '?lon=' + lon + '&lat=' + lat)
 		.then(function(res) {
-			console.log("res.data: ", res.data)
 			return res.data;
 		});
 	}

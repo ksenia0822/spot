@@ -8,12 +8,6 @@ body {
   padding-top: 60px;
   margin: 0 auto; }
 
-fullstack-logo {
-  display: block; }
-  fullstack-logo img {
-    display: block;
-    width: 100%; }
-
 navbar {
   display: block;
   background: white;
@@ -56,11 +50,6 @@ navbar {
     navbar .welcome a {
       color: #f30046;
       cursor: pointer; }
-
-#home fullstack-logo {
-  padding-top: 30px;
-  width: 150px;
-  margin: 0 auto; }
 
 #home h1 {
   margin-top: 40px;
