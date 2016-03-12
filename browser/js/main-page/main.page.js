@@ -8,8 +8,11 @@ app.config(function ($stateProvider) {
 
 app.controller('MainPageController', function($scope, AuthService) {
     $scope.currentUser = {};
-    $scope.currentLocaton = [5, 6];
-    
+    $scope.currentLocation = [];
+
+    $scope.getMyLocation = function() {
+        $scope.getLocation();
+    }
 
     AuthService.getLoggedInUser()
     .then(function(user) {
@@ -26,8 +29,7 @@ app.controller('MainPageController', function($scope, AuthService) {
 
     $scope.getPosition = function(position) {
         $scope.currentLocation = [position.coords.longitude, position.coords.latitude]
-        return $scope.currentLocation;
-        console.log("current location: ", $scope.currentLocation)
+        return $scope.currentLocation;   
     }
 
     $scope.getError = function(error) {
@@ -65,27 +67,6 @@ app.controller('MainPageController', function($scope, AuthService) {
 //              throw new Error();
 //          }
 //      }
-
-//      return LocationFactory;
-
-// })
-
-// app.factory('LocationFactory', function() {
-
-//  var LocationFactory = {};
-
-//  LocationFactory.getLocation = function() {
-//    if (navigator.geolocation) {
-//      navigator.geolocation.getCurrentPosition(function (position) {
-//         var currentLocation = [position.coords.latitude, position.coords.longitude]
-//          return currentLocation;
-//         }, function (error) {
-//             if(error) {
-//             throw new Error();
-//          }
-//      });
-//    } 
-//  }
 
 //      return LocationFactory;
 

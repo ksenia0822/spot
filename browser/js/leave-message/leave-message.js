@@ -32,10 +32,6 @@ app.factory("LeaveMessageFactory", function($http) {
 	return LeaveMessageFactory;
 });
 
-
-
-
-
 app.controller('LeaveMessageController', function($scope, AuthService, allFriends, LeaveMessageFactory) {
 	$scope.currentUser = {};
 

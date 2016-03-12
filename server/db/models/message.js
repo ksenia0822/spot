@@ -49,7 +49,7 @@ messageSchema.statics.getInLocationForOne = function(id, coords) {
         location: {
             $near: {
                 $geometry : {type : "Point", coordinates : coords},
-                $maxDistance : 1
+                $maxDistance : 70
             }
         }
     })

@@ -1,12 +1,12 @@
 app.config(function ($stateProvider) {
     $stateProvider.state('messagesHere', {
-        // url: '/messages/here/:id?lon&lat',
-        url: '/messages/here/:id',
+        url: '/messages/to/:id?lon&lat',
+        // url: '/messages/here/:id',
         templateUrl: 'js/see-msg/see.msg.html', 
         controller:'MessagesHereController', 
         resolve: {
         	allMessages: function($stateParams, MessagesHereFactory) {
-        	return MessagesHereFactory.inboxHere($stateParams.id)
+        	return MessagesHereFactory.inboxHere($stateParams.id, $stateParams.lon, $stateParams.lat)
         	}
         }
     });
@@ -15,36 +15,15 @@ app.config(function ($stateProvider) {
 app.factory('MessagesHereFactory', function($http) {
 	
 	var MessagesHereFactory = {};
-	var curLoc = getLocation();
 
-	function getLocation() {
-		if (navigator.geolocation) {
-	    navigator.geolocation.getCurrentPosition(getPosition, getError);
-	  }
-	}
-
-	function getPosition(position) {
- 		curLoc = [position.coords.longitude, position.coords.latitude]
- 		console.log("this is my location: ", curLoc[0], curLoc[1])
- 		return curLoc;
- 	}
-
- 	function getError (error) {
- 		if(error) {
- 			throw new Error();
- 		}
- 	}
-
-
-
-	MessagesHereFactory.inboxHere = function(id) {
-		return $http.get('/api/messages/to/' + id + '?lon=' + curLoc[0] + '&lat=' + curLoc[1])
+	MessagesHereFactory.inboxHere = function(id, lon, lat) {
+		console.log(lon + " " + lat);
+		return $http.get('/api/messages/to/' + id + '?lon=' + lon + '&lat=' + lat)
 		.then(function(res) {
 			console.log("res.data: ", res.data)
 			return res.data;
 		});
 	}
-
 
 	return MessagesHereFactory;
 })
@@ -62,25 +41,3 @@ app.controller('MessagesHereController', function($scope, AuthService, MessagesH
 
 })
 
-
-app.factory('LocationFactory', function() {
-
- var LocationFactory = {};
- var currentLocation = [];
-
- LocationFactory.getLocation = function() {
-   if (navigator.geolocation) {
-     navigator.geolocation.getCurrentPosition(function (position) {
-        var currentLocation = [position.coords.latitude, position.coords.longitude]
-         return currentLocation;
-        }, function (error) {
-            if(error) {
-            throw new Error();
-         }
-     });
-   } 
- }
-
-     return LocationFactory;
-
-})
