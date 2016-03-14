@@ -20,10 +20,12 @@ app.factory('NotificationsFactory', function($http) {
 			return res.data;
 		});
 	}
-
 	return NotificationsFactory;
 })
 
 app.controller('NotificationsController', function($scope, allMessages) {
 	 $scope.allMessages = allMessages;
+
+     // console.log($scope.allMessages[0].location.coordinates[0])
+
 })

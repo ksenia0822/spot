@@ -25,6 +25,13 @@ router.post('/', function(req, res, next){
   .then(null, next);
 });
 
+router.delete('/', function(req, res, next){
+  Message.remove({})
+  .then(function(msg) {
+    res.json(msg)
+  })
+  .then(null, next);
+});
 
 router.param('id', function(req, res, next, id){
   Message.findById(id)

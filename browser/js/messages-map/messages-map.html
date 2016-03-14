@@ -1,0 +1,5 @@
+<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+<!-- <div id="map"></div> -->
+<div id="class" ng-repeat="marker in markers">
+     <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+</div>

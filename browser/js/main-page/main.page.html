@@ -1,3 +1,13 @@
-<h1><a ui-sref="leaveMessage({id: currentUser._id})">LEAVE A MESSAGE</a></h1>
-<h1><a ui-sref="messagesHere({id: currentUser._id, lon: currentLocation[0], lat: currentLocation[1]})">SEE MESSAGES LEFT HERE</a></h1>
-<h1><a ui-sref="notifications({id: currentUser._id})">SEE NOTIFICATIONS</a></h1>
+<div class='container' id="main-page">
+<div class='row'>
+<div class='col-lg-12'>
+	<h1><a ui-sref="leaveMessage({id: currentUser._id})">Leave a Message</a></h1>
+</div>
+<div class='col-lg-12'>
+	<h1><a ui-sref="messagesHere({id: currentUser._id, lon: currentLocation[0], lat: currentLocation[1]})">See Messages</a></h1>
+</div>
+<div class='col-lg-12'>
+<h1><a ui-sref="notifications({id: currentUser._id})">Notifcations</a></h1>
+</div>
+</div>
+</div>

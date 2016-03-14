@@ -2,27 +2,79 @@
   box-sizing: border-box; }
 
 body {
-  background: #fdfdfd; }
+  background: #f0f0f0; }
 
-#main {
-  padding-top: 60px;
-  margin: 0 auto; }
+h1, h2, h3, h4 {
+  text-align: center;
+  color: #B40B82; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Optima; }
+
+.angular-google-map-container {
+  height: 400px; }
+
+#main-page {
+  padding-top: 200px;
+  text-align: center; }
+  #main-page h1 {
+    padding-bottom: 20px; }
+
+#main-page a {
+  color: #B40B82;
+  font-size: 30px; }
+
+#leave-msg {
+  color: #B40B82;
+  font-family: Optima;
+  padding-top: 100px;
+  text-align: center; }
+  #leave-msg h2 {
+    padding: 100px 0 20px 0; }
+  #leave-msg .form-control {
+    margin: 0 50px 0 100px; }
+  #leave-msg button {
+    margin-top: 20px;
+    font-size: 20px; }
+
+#see-msg {
+  text-align: center;
+  font-size: 120%; }
+  #see-msg h2 {
+    margin-bottom: 40px; }
+  #see-msg h4 {
+    color: #000080; }
+  #see-msg p {
+    margin-bottom: 50px; }
+  #see-msg a {
+    color: #000080;
+    font-weight: bold; }
+    #see-msg a:hover {
+      background: none;
+      color: #B40B82; }
+
+#notifications {
+  text-align: center; }
+  #notifications h2 {
+    margin-bottom: 40px; }
+  #notifications a {
+    color: #1d1d22;
+    text-decoration: none; }
+    #notifications a:hover {
+      background: #000080;
+      color: white;
+      text-decoration: none; }
 
 navbar {
-  display: block;
-  background: white;
+  background: black;
   border-bottom: 1px solid black;
   box-shadow: 1px 1px 14px -3px black; }
   navbar .container {
     width: 91%;
     max-width: 1340px;
     padding-top: 20px; }
-  navbar fullstack-logo {
-    margin-top: 5px;
-    margin-right: 20px;
-    width: 40px; }
   navbar a {
-    color: black;
+    color: grey;
     font-size: 16px; }
   navbar .nav > li > a {
     cursor: pointer;
@@ -41,19 +93,33 @@ navbar {
     background: none;
     outline: none !important; }
   navbar .welcome {
-    float: right;
     margin-top: 12px; }
     navbar .welcome span {
       color: black;
-      font-size: 16px;
+      font-size: 20px;
       margin-right: 5px; }
     navbar .welcome a {
-      color: #f30046;
+      float: right;
+      color: grey;
       cursor: pointer; }
 
-#home h1 {
-  margin-top: 40px;
+#home {
   text-align: center; }
+  #home h1 {
+    font-family: Brush Script MT;
+    font-weight: bold;
+    padding: 20px 0 0px 0; }
+  #home h4 {
+    font-family: Optima;
+    color: #8C8C8C;
+    font-size: 25px;
+    line-height: 150%;
+    padding: 50px 100px 0 100px; }
+  #home .login-button {
+    display: table;
+    border: 1px solid;
+    background: white;
+    margin: auto; }
 
 #about {
   margin: 0 auto;
@@ -127,5 +193,10 @@ tutorial-section-menu {
         background: #f3f3f3; }
 
 #login-form {
-  width: 60%;
-  margin: 0 auto; }
+  width: 40%;
+  margin: auto; }
+
+#title {
+  color: #b40b82;
+  text-align: center;
+  font-size: 150px; }

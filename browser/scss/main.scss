@@ -3,8 +3,99 @@
 }
 
 body {
-  background: #fdfdfd;
+  background: #f0f0f0;
 }
+
+h1, h2, h3, h4 {
+	text-align: center;
+  color: #B40B82;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Optima;
+
+}
+
+.angular-google-map-container { height: 400px; }
+
+
+#main-page {
+  padding-top: 200px;
+  text-align: center; 
+  h1 {
+    padding-bottom: 20px;
+  } 
+}
+
+#main-page a {
+  color: #B40B82;
+  font-size: 30px;
+}
+
+#leave-msg {
+  color: #B40B82;
+  font-family: Optima;
+  padding-top: 100px;
+  text-align: center;
+ 
+  h2 {
+    padding: 100px 0 20px 0;
+  }
+
+  .form-control {
+    margin: 0 50px 0 100px;
+  }
+
+  button {
+  margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+#see-msg {
+  text-align: center;
+  font-size: 120%;
+
+  h2 {
+  margin-bottom: 40px;
+  }
+
+  h4 {
+    color: #000080;
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+
+  a {
+  color: #000080;
+      font-weight: bold;
+  &:hover {
+      background: none;
+      color: #B40B82;
+    }
+  }
+}
+
+#notifications{
+  text-align: center;
+
+  h2 {
+  margin-bottom: 40px;
+  }
+  
+  a {
+    color: #1d1d22;
+    text-decoration: none;
+      &:hover {
+        background: #000080;
+        color: white;
+        text-decoration: none;
+      }
+  }
+}
+
 
 @mixin clearfix {
   &:after {
@@ -14,10 +105,9 @@ body {
   }
 }
 
-#main {
-  padding-top: 60px;
-  margin: 0 auto;
-}
+
+
+
 
 @import 'directives/main';
 @import 'home/main';
