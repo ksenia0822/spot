@@ -21,7 +21,31 @@ app.controller("MapController", function($scope, uiGmapGoogleMapApi, $stateParam
             // latitude: 40.7180007, longitude: -73.9620894 
             latitude: $stateParams.lat, longitude: $stateParams.lon
         }, 
-        zoom: 14
+        zoom: 14,
+
+    };
+    $scope.marker = {
+      id: 0,
+      coords: {
+        latitude: $stateParams.lat,
+        longitude: $stateParams.lon
+      }
+      // events: {
+      //   dragend: function (marker, eventName, args) {
+      //     $log.log('marker dragend');
+      //     var lat = marker.getPosition().lat();
+      //     var lon = marker.getPosition().lng();
+      //     $log.log(lat);
+      //     $log.log(lon);
+
+      //     $scope.marker.options = {
+      //       draggable: true,
+      //       labelContent: "lat: " + $scope.marker.coords.latitude + ' ' + 'lon: ' + $scope.marker.coords.longitude,
+      //       labelAnchor: "100 0",
+      //       labelClass: "marker-labels"
+      //     };
+      //   }
+      // }
     };
 	
     uiGmapGoogleMapApi
@@ -29,6 +53,17 @@ app.controller("MapController", function($scope, uiGmapGoogleMapApi, $stateParam
     });
 
 });
+
+/*
+var marker = {
+                    id: Date.now(),
+                    coords: {
+                        latitude: lat,
+                        longitude: lon
+                    }
+                };
+                $scope.map.markers.push(marker);
+*/
 
 
 

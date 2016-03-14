@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 400px; }
 
 #main-page {
-  padding-top: 200px;
+  padding-top: 50px;
   text-align: center; }
   #main-page h1 {
     padding-bottom: 20px; }
@@ -27,12 +27,12 @@ h1, h2, h3, h4, h5, h6, p {
 #leave-msg {
   color: #B40B82;
   font-family: Optima;
-  padding-top: 100px;
+  padding-top: 0px;
   text-align: center; }
   #leave-msg h2 {
     padding: 100px 0 20px 0; }
   #leave-msg .form-control {
-    margin: 0 50px 0 100px; }
+    margin: 0 50px 0 50px; }
   #leave-msg button {
     margin-top: 20px;
     font-size: 20px; }

@@ -1,6 +1,6 @@
 <section id="notifications">
 	<h2> NOTIFICATIONS</h2>
 	<div ng-repeat="msg in allMessages">
-		<h4><a ui-sref="messages-map({id: currentUser._id, lon: msg.location.coordinates[0], lat: msg.location.coordinates[1]})">From:{{msg.from.firstName}} {{msg.from.lastName}} On {{msg.date | date}}</a> </h4>
+		<h4><a ui-sref="messages-map({id: currentUser._id, lon: msg.location.coordinates[0], lat: msg.location.coordinates[1]})">From: {{msg.from.firstName}} {{msg.from.lastName}} On: {{msg.date | date}}</a> </h4>
 	</div>
 </section>
